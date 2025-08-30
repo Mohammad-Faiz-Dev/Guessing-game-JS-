@@ -1,0 +1,79 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 5vw;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+input, button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* ensures padding doesn't overflow width */
+}
+
+button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Container layout */
+#setup, #game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* max width for large screens */
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+/* Ensure inputs/buttons don’t stretch too far */
+#setup input, #game input,
+#setup button, #game button {
+    max-width: 90%; /* caps width on small devices */
+}
+
+/* Feedback and attempts */
+#feedback, #attempts {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+    #setup, #game {
+        padding: 1rem;
+        width: 95%;
+    }
+
+    input, button {
+        width: 100%;
+        max-width: 100%; /* ensures they don’t overflow container */
+        font-size: 1rem;
+    }
+}
